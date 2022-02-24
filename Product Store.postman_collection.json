@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "18d0bb38-7c5d-4cfb-8337-b4ad54107ae2",
+		"name": "Product Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Obtener todos los productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/product-store/product",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product-store",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener producto por SKU",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/product-store/product/FAL-10000001",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product-store",
+						"product",
+						"FAL-10000001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar producto por SKU",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/product-store/product/FAL-10000002",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product-store",
+						"product",
+						"FAL-10000002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Producto BICICLETA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sku\": \"FAL-10000001\",\r\n    \"name\": \"Bicicleta Mountain Bike\",\r\n    \"brand\": \"Jeep\",\r\n    \"size\": \"ST\",\r\n    \"price\": 3999990.00,\r\n    \"image\": \"https://falabella.scene7.com/is/image/Falabella/881952283_1\",\r\n    \"images\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/product-store/product",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product-store",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Producto BICICLETA",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Bicicleta Mountain Bike\",\r\n    \"brand\": \"Jeep\",\r\n    \"size\": \"ST\",\r\n    \"price\": 3999990.00,\r\n    \"image\": \"https://www.google.com\",\r\n    \"images\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/product-store/product/FAL-10000001",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product-store",
+						"product",
+						"FAL-10000001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Producto ZAPATILLA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sku\": \"FAL-10000002\",\r\n    \"name\": \"500 Zapatilla Urbana Mujer\",\r\n    \"brand\": \"New Balance\",\r\n    \"size\": \"37\",\r\n    \"price\": 42990.00,\r\n    \"image\": \"https://falabella.scene7.com/is/image/Falabella/8406270_1\",\r\n    \"images\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/product-store/product",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product-store",
+						"product"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
